@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
 
-import Apps from "./Apps";
 import Funds from "./Funds";
 import Holdings from "./Holdings";
 
@@ -16,12 +15,11 @@ function Dashboard() {
     <div className="dashboard-container">
       <div className="content">
         <Routes>
-          <Route exact path="/" element={<Summary />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/holdings" element={<Holdings />} />
           <Route path="/positions" element={<Positions />} />
           <Route path="/funds" element={<Funds />} />
-          <Route path="/apps" element={<Apps />} />
+          <Route path="/summary" element={<Summary />} />
         </Routes>
       </div>
       <GeneralContextProvider>

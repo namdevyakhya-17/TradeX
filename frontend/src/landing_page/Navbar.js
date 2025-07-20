@@ -6,7 +6,7 @@ function Navbar() {
         <nav class="navbar navbar-expand-lg border-bottom" style={{ backgroundColor: "#FFFF" }}>
             <div class="container p-2">
                 <Link class="navbar-brand" to={"/"}>
-                    <img src='media/images/logo_tradex_large.png' alt='logo-img' style={{width: "20%"}}/>
+                    <img src='media/images/logo_tradex_large.png' alt='logo-img' style={{ width: "20%" }} />
                 </Link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -14,6 +14,9 @@ function Navbar() {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <form class="d-flex" role="search">
                         <ul class="navbar-nav mb-lg-0">
+                            {/* <li class="nav-item">
+                                <Link class="nav-link active" aria-current="page" to={"/dashboard"}>Dashboard</Link>
+                            </li> */}
                             <li class="nav-item">
                                 <Link class="nav-link active" aria-current="page" to={"/signup"}>SignUp</Link>
                             </li>

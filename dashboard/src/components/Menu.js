@@ -25,15 +25,15 @@ function Menu() {
             <div className="menus">
                 <ul>
                     <li>
-                        <Link
+                        <a
+                            href="http://localhost:3000/"
                             style={{ textDecoration: "none" }}
-                            to="/"
                             onClick={() => handleMenuClick(0)}
                         >
                             <p className={selectedMenu === 0 ? activeMenuClass : menuClass}>
-                                Dashboard
+                                Home
                             </p>
-                        </Link>
+                        </a>
                     </li>
                     <li>
                         <Link
@@ -71,7 +71,7 @@ function Menu() {
                     <li>
                         <Link
                             style={{ textDecoration: "none" }}
-                            to="funds"
+                            to="/funds"
                             onClick={() => handleMenuClick(4)}
                         >
                             <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
@@ -82,11 +82,11 @@ function Menu() {
                     <li>
                         <Link
                             style={{ textDecoration: "none" }}
-                            to="/apps"
+                            to="/summary"
                             onClick={() => handleMenuClick(6)}
                         >
                             <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
-                                Apps
+                                Summary
                             </p>
                         </Link>
                     </li>
