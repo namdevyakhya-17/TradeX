@@ -16,6 +16,12 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
+// const corsOptions = {
+//   origin: "http://localhost:3000",
+//   credentials: true,
+// };
+
+// app.use(cors(corsOptions));
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/", authRoute);
