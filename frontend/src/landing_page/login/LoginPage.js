@@ -41,7 +41,7 @@ function LoginPage() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/login",
+        "http://localhost:3002/auth/login",
         {
           ...inputValue,
         },
@@ -53,7 +53,7 @@ function LoginPage() {
         handleSuccess(message);
         console.log("Redirecting to dashboard...");
         setTimeout(() => {
-          navigate("/orders"); 
+          window.location.href = "http://localhost:3001/orders";
         }, 1000);
       } else {
         handleError(message);

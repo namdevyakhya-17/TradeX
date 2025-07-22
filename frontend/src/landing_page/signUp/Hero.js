@@ -34,7 +34,6 @@ function Hero() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Simple validation
     if (!email || !password || !username) {
       handleError("All fields are required");
       return;
@@ -42,7 +41,7 @@ function Hero() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/signup",
+        "http://localhost:3002/auth/signup",
         {
           ...inputValue,
         },
@@ -52,7 +51,7 @@ function Hero() {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate("/orders");
+          window.location.href = "http://localhost:3001/orders"
         }, 1000);
       } else {
         handleError(message);

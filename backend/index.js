@@ -16,15 +16,15 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-// const corsOptions = {
-//   origin: "http://localhost:3000",
-//   credentials: true,
-// };
+const corsOptions = {
+  origin: ["http://localhost:3000", "http://localhost:3001"],
+  credentials: true,
+};
 
-// app.use(cors(corsOptions));
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
-app.use("/", authRoute);
+app.use("/auth", authRoute);
+
 
 // app.get("/addHoldings", async (req, res) => {
 //   let tempHoldings = [
@@ -221,5 +221,5 @@ app.post("/newOrder", async (req, res) => {
 app.listen(PORT, () => {
   console.log("App started!");
   mongoose.connect(uri);
-  console.log("DB started!");
+  console.log(`DB started! ${PORT}`);
 });
